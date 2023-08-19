@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=11">
+		<title>桂花坊</title>
+		<link rel="icon" href="" type="image/x-icon" / >
+		<script src="./script/jquery1.11.0.min.js"></script>
+		<script src="./script/main.js" type="text/javascript"></script>
+		<link href="./style/main.css" rel="stylesheet">
+		<script type="text/javascript">
+			var theForm = document.forms['form1'];
+			if (!theForm) {
+				theForm = document.form1;
+			}
+			function __doPostBack(eventTarget, eventArgument) {
+				if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+					theForm.__EVENTTARGET.value = eventTarget;
+					theForm.__EVENTARGUMENT.value = eventArgument;
+					theForm.submit();
+				}
+			}
+		</script>
+	</head>
+	<body style="">
+		<form method="post" action="#" id="form1" style="height: 100%;">
+			<div class="wrap">
+				<div id="divLeftMenu" class="boxLeft">
+					<div class="titleWhite">
+						<div class="a"></div>
+						<div>桂花坊</div>
+						<div class="b"></div>
+					</div>
+					<div class="titleGreen">
+						<div class="a" data-page="main">主頁</div>
+						<div class="b" data-page="products">盆栽</div>
+					</div>
+				</div>
+				<div class="boxRight">
+					<a class="btn_OFF" id="aShowMenu" title=""></a>
+					<iframe id="aIframe" src="./main.html" >
+					</iframe>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
